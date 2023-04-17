@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import * as actions from "../../store/actions";
 import Navigator from '../../components/Navigator';
 import { adminMenu } from './menuApp';
 import './Header.scss';
-
+import coviet from '../../assets/Co-Vietnam.jpg';
+import coanh from '../../assets/co-anh.png';
+import { LANGUAGES } from "../../utils";
 class Header extends Component {
-
+    handleChangeLanguage = (language) => {
+        this.props.changeLanguageAppRedux(language)
+    }
     render() {
-        const { processLogout } = this.props;
+        const { processLogout, language } = this.props;
 
         return (
             <div className="header-container">
@@ -17,11 +20,25 @@ class Header extends Component {
                 <div className="header-tabs-container">
                     <Navigator menus={adminMenu} />
                 </div>
-
-                {/* nút logout */}
-                <div className="btn btn-logout" onClick={processLogout}>
-                    <i className="fas fa-sign-out-alt"></i>
+                <div className='header-right'>
+                    <div className='language-vi'>
+                        <div className='anh-vi'>
+                            <img src={coviet}/>
+                        </div>
+                        <span className={language === LANGUAGES.VI ? 'vi active' : 'vi'} onClick={() => this.handleChangeLanguage(LANGUAGES.VI)}>Việt Nam</span>
+                    </div>
+                    <div className='language-en'>
+                        <div className='anh-en'>
+                            <img src={coanh}/>
+                        </div>
+                        <span className={language === LANGUAGES.EN ? 'en active' : 'en'} onClick={() => this.handleChangeLanguage(LANGUAGES.EN)}>English</span>
+                    </div>
+                    {/* nút logout */}
+                    <div className="btn btn-logout" onClick={processLogout} title = 'Log out'>
+                        <i className="fas fa-sign-out-alt"></i>
+                    </div>
                 </div>
+                
             </div>
         );
     }
@@ -30,13 +47,15 @@ class Header extends Component {
 
 const mapStateToProps = state => {
     return {
-        isLoggedIn: state.admin.isLoggedIn
+        isLoggedIn: state.user.isLoggedIn,
+        language: state.app.language,
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         processLogout: () => dispatch(actions.processLogout()),
+        changeLanguageAppRedux: (language) => dispatch(actions.changeLanguageApp(language))
     };
 };
 

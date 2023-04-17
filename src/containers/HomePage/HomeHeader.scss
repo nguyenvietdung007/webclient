@@ -1,0 +1,308 @@
+.home-header-container{
+    height: 90px;
+    //border: 1px solid red;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 30px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10000;
+    border-bottom: 1px solid rgb(173, 173, 173);
+    .home-header-content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        .left-content{
+            width: 20%;
+            display: flex;
+            align-items: center;
+            //border: 1px solid green;
+            .header-logo{
+                background: url('../../assets/dnt_logo.jpg') center center no-repeat;
+                height: 100%;
+                width: 100%;
+                cursor: pointer;
+                transform: scale(0.9, 0.9);
+                margin-left: -25px;
+            }
+            i{
+                font-size: 25px;
+                color: grey;
+                cursor: pointer;
+            }
+        }
+        .center-content{
+            width: 60%;
+            //border: 1px solid gray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 30px;
+            padding-right: 10px;
+            .child-content{
+                .bold{
+                    font-size: 18px;
+                    b{
+                        cursor: pointer;
+                        &:hover{
+                            color: rgb(27, 129, 207);
+                        }
+                    }
+                }
+                .subs-title{
+                    font-weight: 500;
+                    font-size: 14px;
+                    // cursor: pointer;
+                }
+            }
+        }
+        .right-content{
+            width: 25%;
+            //border: 1px solid yellow;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .support{
+                margin-right: 50px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                font-weight: bolder;
+                &:hover{
+                    color: rgb(27, 129, 207);
+                }
+
+                i{
+                    margin-right: 3px;
+                    font-size: 17px;
+                }
+            }
+
+            .language-vi{
+                cursor: pointer;
+                display: flex;
+                
+
+                .anhviet{
+                    padding-right: 3px;
+                    padding-bottom: 2px;
+                }
+                .textviet{
+                    padding-top: 2px;
+                    opacity: 0.2;
+                    &.active{
+                        opacity: 1;
+                        span{
+                            color: rgb(220, 16, 13);
+                        }
+                    }
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+            }
+            .language-en{
+                cursor: pointer;
+                display: flex;
+                
+                .anhanh{
+                    padding-right: 3px;
+                    padding-left: 15px;
+                    padding-bottom: 2px;
+                }
+                .textanh{
+                    padding-top: 2px;
+                    opacity: 0.2;
+                    &.active{
+                        opacity: 1;
+                        span{
+                            color: rgb(15, 61, 214);
+                        }
+                    }
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
+.home-header-banner{
+    background: url('../../assets/gia-dinh.jpg') center center no-repeat;
+    height: 648px;
+    display: flex;
+    flex-direction: column;
+
+    .content-up{
+        background-image: linear-gradient(rgba(126, 126, 126, 0.25), rgba(255, 255, 255, 0.1));
+        //border: 1px solid red;
+        height: 80%;
+        padding-top: 18px;
+        .title1{
+            text-align: center;
+            font-size: 33px;
+            text-shadow: 3px 3px 3px #333;
+            color: white;
+            margin-bottom: 5px;
+            margin-top: 30px;
+        }
+        .title2{
+            text-align: center;
+            font-size: 33px;
+            text-shadow: 3px 3px 3px #333;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 42px;
+        }
+        .search{
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            padding: 10px;
+            border-radius: 40px;
+            background: rgb(0, 136, 255);
+    
+            i{
+                margin: 0 14px 0 10px;
+            }
+    
+            input{
+                height: 32px;
+                width: 440px;
+                background: transparent;
+                border: none;
+                outline: none;
+                padding-top: 2px;
+                font-size: 17px;
+
+                .change-text{
+                    color: rgba(0, 0, 0, 0.767);
+                    font-size: 17px;
+                    padding-top: 2px;
+                    animation: change ease 40s infinite;
+                }
+                @keyframes change {
+                    0% {
+                                    content:'Tìm chuyên khoa khám sức khỏe';
+                                 }
+                                 10% {
+                                     content:'Tìm bệnh viện';
+                                 }
+                                 20% {
+                                     content:'Tìm phòng khám';
+                                 }
+                                 30% {
+                                     content:'Tìm bác sĩ';
+                                 }
+                                 40% {
+                                     content:'Tìm gói khám tổng quát';
+                                 }
+                                 50% {
+                                     content:'Tìm gói xét nghiệm';
+                                 }
+                                 60% {
+                                     content:'Tìm gói phẩu thuật';
+                                 }
+                                 70% {
+                                     content:'Lý do khám sức khỏe';
+                                 }
+                                 80% {
+                                     content:'Tìm cơ sở y tế';
+                                 }
+                                 90% {
+                                     content:'Tìm sản phẩm y tế';
+                                 }
+                }
+            }
+            ::placeholder { 
+                 color: rgba(0, 0, 0, 0.767);
+                 font-size: 17px;
+                 padding-top: 2px;
+                 animation: doiChu ease 40s infinite;
+
+            //     @keyframes doiChu {
+            //         0% {
+            //             placeholder:'Tìm chuyên khoa khám sức khỏe';
+            //         }
+            //         10% {
+            //             placeholder:'Tìm bệnh viện';
+            //         }
+            //         20% {
+            //             placeholder:'Tìm phòng khám';
+            //         }
+            //         30% {
+            //             placeholder:'Tìm bác sĩ';
+            //         }
+            //         40% {
+            //             placeholder:'Tìm gói khám tổng quát';
+            //         }
+            //         50% {
+            //             placeholder:'Tìm gói xét nghiệm';
+            //         }
+            //         60% {
+            //             placeholder:'Tìm gói phẩu thuật';
+            //         }
+            //         70% {
+            //             placeholder:'Lý do khám sức khỏe';
+            //         }
+            //         80% {
+            //             placeholder:'Tìm cơ sở y tế';
+            //         }
+            //         90% {
+            //             placeholder:'Tìm sản phẩm y tế';
+            //         }
+            //     }
+             }
+        }
+    }
+    
+    .content-down{
+        //border: 1px solid green;
+        height: 30%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 30px;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
+        .options{
+            gap: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+
+            .option-child{
+                //border: 1px solid red;
+                width: 100px;
+
+                .icon-child{
+                    background: white;
+                    width: 40px;
+                    height: 40px;
+                    padding: 10px;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin: 0 auto;
+                    i{
+                        color: rgb(27, 129, 207);
+                        font-size: 22px;
+                    }
+                }
+                .text-child{
+                    font-size: 16px;
+                    font-weight: 550;
+                    cursor: pointer;
+                    &:hover{
+                        color: rgb(27, 129, 207);
+                    }
+                }
+            }
+
+        }
+    }
+    
+}   
