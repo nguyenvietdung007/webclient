@@ -7,13 +7,14 @@ import './Header.scss';
 import coviet from '../../assets/Co-Vietnam.jpg';
 import coanh from '../../assets/co-anh.png';
 import { LANGUAGES } from "../../utils";
+import { FormattedMessage } from 'react-intl';
 class Header extends Component {
     handleChangeLanguage = (language) => {
         this.props.changeLanguageAppRedux(language)
     }
     render() {
-        const { processLogout, language } = this.props;
-
+        const { processLogout, language, userInfo} = this.props;
+        console.log('check userInfo: ', userInfo)
         return (
             <div className="header-container">
                 {/* thanh navigator */}
@@ -21,6 +22,7 @@ class Header extends Component {
                     <Navigator menus={adminMenu} />
                 </div>
                 <div className='header-right'>
+                    <span className='welcome'><FormattedMessage id='homeheader.welcome'/> {userInfo && userInfo.firstName && userInfo.lastName ? userInfo.firstName + " " + userInfo.lastName : ''} !</span>
                     <div className='language-vi'>
                         <div className='anh-vi'>
                             <img src={coviet}/>
@@ -48,6 +50,7 @@ class Header extends Component {
 const mapStateToProps = state => {
     return {
         isLoggedIn: state.user.isLoggedIn,
+        userInfo: state.user.userInfo,
         language: state.app.language,
     };
 };

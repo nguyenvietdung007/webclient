@@ -203,6 +203,13 @@
         text-decoration: unset;
         color: #0b0799;
     }
+    &:hover{
+        background:rgb(30, 221, 81);
+        a{
+            color: white;
+            font-weight: bold;
+        }
+    }
 }
 .section-about{
     padding: 0 100px;

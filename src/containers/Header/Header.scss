@@ -22,7 +22,10 @@
     }
     .header-right{
         display: flex;
-
+        .welcome{
+            margin-right: 15px;
+            margin-top: 9px;
+        }
         .language-vi{
             display: flex;
             margin-top: 8px;

@@ -8,7 +8,8 @@
         "search-doctor": "Find a doctor by specialty",
         "doctor": "Doctor",
         "select-doctor": "Choose a good doctor",
-        "support": "Support"
+        "support": "Support",
+        "welcome": "Welcome, "
     },
     "banner": {
         "title1": "MEDICAL BACKGROUND",
@@ -58,6 +59,25 @@
             "system-parameter": {
                 "header": "System-parameter"
             }
+        },
+        "admin": {
+            "manage-user": "Users",
+            "manage-doctor": "List of doctors",
+            "manage-admin": "Admin list",
+            "crud": "Add, edit, delete users",
+            "crud-redux": "Add, edit, delete doctors"
+        },
+        "clinics": {
+            "clinic": "Clinics",
+            "manage-clinic": "Clinic manager"
+        },
+        "specialtys": {
+            "specialty": "Specialtys",
+            "manage-specialty": "Specialty manager"
+        },
+        "handbooks": {
+            "handbook": "Handbooks",
+            "manage-handbook": "Handbook manager"
         }
     },
     "system": {
@@ -137,5 +157,22 @@
             "remove-assign-fail": "Fail to unassign service package to customer",
             "sure-delete-assign": "Are you sure to unassign service package to customer?"
         }
+    },
+    "user-redux": {
+        "add": "Create New User",
+        "password": "Password",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "address": "Address",
+        "sex": "Sex",
+        "role": "Role",
+        "number": "Phone Number",
+        "position": "Position",
+        "image": "Avatar",
+        "check-out": "Check me out",
+        "add-new": "Add New",
+        "male": "Male",
+        "female": "Female",
+        "other": "Other"
     }
 }
