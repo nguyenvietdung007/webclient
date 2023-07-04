@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/webclient/static/css/main.ea9d892c.chunk.css",
+    "main.js": "/webclient/static/js/main.c970f95e.chunk.js",
+    "main.js.map": "/webclient/static/js/main.c970f95e.chunk.js.map",
+    "runtime-main.js": "/webclient/static/js/runtime-main.fda3c61d.js",
+    "runtime-main.js.map": "/webclient/static/js/runtime-main.fda3c61d.js.map",
+    "static/css/2.f98b94d8.chunk.css": "/webclient/static/css/2.f98b94d8.chunk.css",
+    "static/js/2.c616b71b.chunk.js": "/webclient/static/js/2.c616b71b.chunk.js",
+    "static/js/2.c616b71b.chunk.js.map": "/webclient/static/js/2.c616b71b.chunk.js.map",
+    "index.html": "/webclient/index.html",
+    "static/css/2.f98b94d8.chunk.css.map": "/webclient/static/css/2.f98b94d8.chunk.css.map",
+    "static/css/main.ea9d892c.chunk.css.map": "/webclient/static/css/main.ea9d892c.chunk.css.map",
+    "static/js/2.c616b71b.chunk.js.LICENSE.txt": "/webclient/static/js/2.c616b71b.chunk.js.LICENSE.txt",
+    "static/media/HomePage.scss": "/webclient/static/media/handbook1.4de748df.jpg",
+    "static/media/styles.scss": "/webclient/static/media/fa-solid-900.d279d01b.svg",
+    "static/media/HomeHeader.scss": "/webclient/static/media/gia-dinh.e2ce186c.jpg",
+    "static/media/slick-theme.css": "/webclient/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fda3c61d.js",
+    "static/css/2.f98b94d8.chunk.css",
+    "static/js/2.c616b71b.chunk.js",
+    "static/css/main.ea9d892c.chunk.css",
+    "static/js/main.c970f95e.chunk.js"
+  ]
+}
